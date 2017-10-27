@@ -5,15 +5,16 @@ class PostsController < ApplicationController
   end
   
   def new
-    
+    @post=Post.new
   end
   
   def create
     post = Post.new
-    post.content = params[:content]
+    post.image = params[:post][:image]
+    post.content = params[:post][:content]
     post.save
     
-    redirect_to "/posts/#{post.id}"
+    redirect_to post
   end
   
   def show
@@ -26,14 +27,17 @@ class PostsController < ApplicationController
   
   def update
     post = Post.find(params[:id])
+    post.image = params[:post][:image]
     post.content = params[:content]
     post.save
     
-    redirect_to "/posts/#{post.id}"
+    redirect_to post
   end
   
   def destroy
-    
+    post=Post.find(params[:id])
+    post.destroy
+    redirect_to "/posts"
   end
     
 end

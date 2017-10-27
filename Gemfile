@@ -1,5 +1,13 @@
 source 'https://rubygems.org'
 
+gem 'fog'
+gem 'carrierwave'
+gem 'figaro'
+gem 'mini_magick'
+gem 'bootstrap'
+
+#sudo apt-get update
+#sudo apt-get install imagemagick
 gem 'rails_db'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

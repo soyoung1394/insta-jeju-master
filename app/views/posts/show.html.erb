@@ -1,5 +1,8 @@
-<a href="/posts/<%= @post.id %>/edit">Edit</a>
-
+<%=link_to("Edit",edit_post_path(@post))%>
 <div>
-  <%= @post.content %>
+    <%=image_tag (@post.image.url, class:"img-fluid) %>
+    <%= @post.content %>
+  
 </div>
+
+<%=link_to("Delete", @post, method: :delete)%>

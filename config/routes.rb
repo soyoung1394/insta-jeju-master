@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
   # RESTful
-  get 'posts' => 'posts#index'
-  get 'posts/new' => 'posts#new'
-  get 'posts/:id' => 'posts#show'
-  post 'posts' => 'posts#create'
-  get 'posts/:id/edit' => 'posts#edit'
-  put 'posts/:id' => 'posts#update'
-  
+  # get 'posts' => 'posts#index'
+  # get 'posts/new' => 'posts#new'
+  # get 'posts/:id' => 'posts#show'
+  # post 'posts' => 'posts#create'
+  # get 'posts/:id/edit' => 'posts#edit'
+  # put 'posts/:id' => 'posts#update'
+  # delete 'posts.:id' =>'posts#destroy'
+  root 'posts#index'
+  resources :posts #CRUD를 한번에 만들어주는것 위에 주석처리된것을 한번에 만들어줌
   
   
   # The priority is based upon order of creation: first created -> highest priority.
