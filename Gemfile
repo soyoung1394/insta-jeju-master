@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'fog'
-gem 'carrierwave'
-gem 'figaro'
-gem 'mini_magick'
+gem 'fog'#aws
+gem 'carrierwave'#image업로드
+gem 'figaro' #key관리
+gem 'mini_magick' #image편짐(image magick)
 gem 'bootstrap'
+gem 'devise' #login기능
 
 #sudo apt-get update
 #sudo apt-get install imagemagick
